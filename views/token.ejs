@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Token Display</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #6e8efb, #a777e3);
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            max-width: 90%;
+            width: 400px;
+        }
+        h1 {
+            color: #444;
+            font-size: 28px;
+        }
+        .token {
+            font-size: 32px;
+            font-weight: bold;
+            color: #ff5722;
+            margin-top: 15px;
+            padding: 10px;
+            border: 2px dashed #ff5722;
+            display: inline-block;
+            border-radius: 10px;
+            word-wrap: break-word;
+        }
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 24px;
+            }
+            .token {
+                font-size: 28px;
+                padding: 8px;
+            }
+            .container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Your Token Number</h1>
+        <div class="token" id="tokenNumber"><%=tokenNumber%></div>
+    </div>
+
+    <script>
+        alert("This Token is important for receving order")
+    </script>
+</body>
+</html>
