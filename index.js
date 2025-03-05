@@ -307,7 +307,15 @@ app.get("/updateItem/:productid",async function(req,res){
     }
 })
 app.post("/updateItem",async function(req,res){
-   await  productDataBase.findOneAndUpdate({name:req.body.name},{name:req.body.newname,fakePrice:req.body.fakePrice,realPrice:req.body.realPrice,imageUrl:req.body.imageUrl,productCategary:req.body.productCategary});
+   await  productDataBase.findOneAndUpdate({name:req.body.name},{
+       name:req.body.newname,
+       fakePrice:req.body.fakePrice,
+       realPrice:req.body.realPrice,
+       imageUrl:req.body.imageUrl,
+       productCategary:req.body.productCategary,
+       off:(100- Number(Number(req.body.realPrice)/Number(req.body.fakePrice))*100).toFixed(2)
+
+   });
     res.redirect("/");
 })
 
